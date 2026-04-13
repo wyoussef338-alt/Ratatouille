@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ratatouille</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&family=Poppins:wght@400;600;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="container header-inner">
+            <div class="logo">
+                <img src="ratlogo.jpg" alt="Ratatouille">
+                <h1>Ratatouille</h1>
+            </div>
+            <nav>
+                <a href="#hero">Home</a>
+                <a href="#menu">Menu</a>
+                <a href="#kitchen">Kitchen</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="hero">
+            <div class="hero-content">
+                <h1>Anyone<br>Can Cook</h1>
+                <p>Welcome to our little kitchen. Where magic happens with every ingredient.</p>
+                <div class="hero-btns">
+                    <a href="#menu" class="btn-main">View Menu</a>
+                    <a href="#kitchen" class="btn-sub">Start Cooking</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="menu">
+            <h2 class="section-title">📜 Our Special Menu</h2>
+            <div class="menu-slider">
+                <div class="menu-track">
+                    <article class="card" onclick="openRecipe('ratatouille')">
+                        <img src="https://images.unsplash.com/photo-1572453800999-e8d2d1589b7c?w=500" alt="Ratatouille">
+                        <h3>🍲 Ratatouille</h3>
+                        <div class="hover-info">View Recipe</div>
+                    </article>
+                    <article class="card" onclick="openRecipe('pizza')">
+                        <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?w=500" alt="Pizza">
+                        <h3>🍕 Pizza</h3>
+                        <div class="hover-info">View Recipe</div>
+                    </article>
+                    <article class="card" onclick="openRecipe('pasta')">
+                        <img src="https://images.unsplash.com/photo-1473093226795-af9932fe5856?w=500" alt="Pasta">
+                        <h3>🍝 Pasta</h3>
+                        <div class="hover-info">View Recipe</div>
+                    </article>
+                    <article class="card" onclick="openRecipe('burger')">
+                        <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=500" alt="Burger">
+                        <h3>🍔 Burger</h3>
+                        <div class="hover-info">View Recipe</div>
+                    </article>
+                    <article class="card" onclick="openRecipe('ratatouille')">
+                        <img src="https://images.unsplash.com/photo-1572453800999-e8d2d1589b7c?w=500" alt="Ratatouille">
+                        <h3>🍲 Ratatouille</h3>
+                        <div class="hover-info">View Recipe</div>
+                    </article>
+                    <article class="card" onclick="openRecipe('pizza')">
+                        <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?w=500" alt="Pizza">
+                        <h3>🍕 Pizza</h3>
+                        <div class="hover-info">View Recipe</div>
+                    </article>
+                    <article class="card" onclick="openRecipe('pasta')">
+                        <img src="https://images.unsplash.com/photo-1473093226795-af9932fe5856?w=500" alt="Pasta">
+                        <h3>🍝 Pasta</h3>
+                        <div class="hover-info">View Recipe</div>
+                    </article>
+                    <article class="card" onclick="openRecipe('burger')">
+                        <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=500" alt="Burger">
+                        <h3>🍔 Burger</h3>
+                        <div class="hover-info">View Recipe</div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="kitchen" class="container">
+            <div class="kitchen-box">
+                <h2>👨‍🍳 Smart Ingredient Finder</h2>
+                <p>What's in your fridge? Type at least 3 ingredients!</p>
+                
+                <div class="input-area">
+                    <input type="text" id="ingredient-input" placeholder="e.g. tomato, chicken, garlic...">
+                    <button onclick="addIngredient()" id="add-btn">Add</button>
+                </div>
+
+                <div id="ingredients-tags" class="tags-container"></div>
+
+                <div class="action-area">
+                    <button onclick="searchRecipes()" id="cook-btn">Find Recipes</button>
+                    <p id="search-status"></p>
+                </div>
+
+                <div id="api-results" class="results-grid"></div>
+            </div>
+        </section>
+    </main>
+
+    <div id="recipe-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeRecipe()">&times;</span>
+            <div class="recipe-details">
+                <h2 id="recipe-title"></h2>
+                <div class="recipe-meta" id="recipe-meta"></div>
+                <p id="recipe-desc"></p>
+                <img id="recipe-img" src="" alt="">
+                <div class="recipe-steps" id="recipe-text"></div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>Made with ❤️ by a Master Chef</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
