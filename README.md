@@ -12,6 +12,6 @@ A fun and interactive web experience inspired by the movie Ratatouille. This sit
 * **Fun Graphics:** Featuring our favorite rat chef!
 
 ## 🛠️ Built With
-* **HTML**
-* **CSS**
+* **HTML5**
+* **CSS3**
 * **JavaScript**
