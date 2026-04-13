@@ -13,5 +13,5 @@ A fun and interactive web experience inspired by the movie Ratatouille. This sit
 
 ## 🛠️ Built With
 * **HTML5**
-* **CSS3**
+* **CSS**
 * **JavaScript**
